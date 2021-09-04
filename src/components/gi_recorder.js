@@ -1,20 +1,27 @@
 import {
     Container,
     Typography,
-  } from '@material-ui/core';
+} from '@material-ui/core';
 
-  const gi_recorder = () => {
-    return (
-      <Container>
-        <Typography
-            variant="h4"
-            align="center"
-            color="primary"
-          >
-            GI Recorder
-          </Typography>
-      </Container>
-    );
-  }
+import RecorderGrid from './recorderGrid';
+
+import './gi_recorder.css';
+
+const gi_recorder = () => {
+  return (
+    <Container>
+      <Typography
+        id="company_logo"
+        variant="h4"
+        align="center"
+        color="primary"
+      >
+        Lucidus Iter
+      </Typography>
+
+      <RecorderGrid />
+    </Container>
+  );
+}
 
   export default gi_recorder;

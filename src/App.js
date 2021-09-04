@@ -15,6 +15,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: [
+      'Helvetica Neue',
       'FootLight',
       'Georgia',
       'Bradley Hand',
