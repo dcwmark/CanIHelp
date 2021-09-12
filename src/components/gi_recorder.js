@@ -3,7 +3,7 @@ import {
     Typography,
 } from '@material-ui/core';
 
-import RecorderGrid from './recorderGrid';
+import RecorderGrid from './RecorderGrid';
 
 import './gi_recorder.css';
 
