@@ -5,74 +5,131 @@ const giRows = [{
   giDate: (new Date(2021, 8, 1)).toString(),
   meals: [{
     mealType: 'fasting',
-    whenDosage: 'before',
-    gi: 100,
+    whenDosage: [{
+      when: '',
+      gi: 90,
+    }],
   }, {
     mealType: 'breakfast',
-    whenDosage: 'after',
-    gi: 90,
+    whenDosage: [{
+      when: 'before',
+      gi: 90,
+    }, {
+      when: 'after',
+      gi: 90,
+    }],
   }, {
     mealType: 'lunch',
-    whenDosage: 'after',
-    gi: 80,
+    whenDosage: [{
+      when: 'before',
+      gi: 100,
+    }, {
+      when: 'after',
+      gi: 100,
+    }],
   }, {
     mealType: 'dinner',
-    whenDosage: 'before',
-    gi: 85,
+    whenDosage: [{
+      when: 'before',
+      gi: 110,
+    }, {
+      when: 'after',
+      gi: 110,
+    }],
   }, {
     mealType: 'other',
-    whenDosage: 'before',
-    gi: 101,
+    whenDosage: [{
+      when: '',
+      gi: 120,
+    }],
   }],
   comment: 'A',
-}, {  
+}, {
   id: uuidv4(),
   giDate: (new Date(2021, 8, 2)).toString(),
   meals: [{
     mealType: 'fasting',
-    whenDosage: 'before',
-    gi: 100,
+    whenDosage: [{
+      when: '',
+      gi: 80,
+    }],
   }, {
     mealType: 'breakfast',
-    whenDosage: 'after',
-    gi: 90,
+    whenDosage: [{
+      when: 'before',
+      gi: 90,
+    }, {
+      when: 'after',
+      gi: 90,
+    }],
   }, {
     mealType: 'lunch',
-    whenDosage: 'after',
-    gi: 80,
+    whenDosage: [{
+      when: 'before',
+      gi: 100,
+    }, {
+      when: 'after',
+      gi: 100,
+    }],
   }, {
     mealType: 'dinner',
-    whenDosage: 'before',
-    gi: 85,
+    whenDosage: [{
+      when: 'before',
+      gi: 110,
+    }, {
+      when: 'after',
+      gi: 110,
+    }],
   }, {
     mealType: 'other',
-    whenDosage: 'before',
-    gi: 101,
+    whenDosage: [{
+      when: '',
+      gi: 120,
+    }],
   }],
   comment: 'B',
-}, {  
+}, {
   id: uuidv4(),
   giDate: (new Date(2021, 8, 3)).toString(),
   meals: [{
     mealType: 'fasting',
-    whenDosage: 'before',
-    gi: 100,
+    whenDosage: [{
+      when: '',
+      gi: 70,
+    }],
   }, {
     mealType: 'breakfast',
-    whenDosage: 'after',
-    gi: 90,
+    whenDosage: [{
+      when: 'before',
+      gi: 80,
+    }, {
+      when: 'after',
+      gi: 80,
+    }],
   }, {
     mealType: 'lunch',
-    whenDosage: 'after',
-    gi: 80,
+    whenDosage: [{
+      when: 'before',
+      gi: 90,
+    }, {
+      when: 'after',
+      gi: 90,
+    }],
   }, {
     mealType: 'dinner',
-    whenDosage: 'before',
-    gi: 85,
+    whenDosage: [{
+      when: 'before',
+      gi: 100,
+    }, {
+      when: 'after',
+      gi: 100,
+    }],
   }, {
     mealType: 'other',
-    whenDosage: 'before',
-    gi: 101,
+    whenDosage: [{
+      when: '',
+      gi: 110,
+    }],
   }],
   comment: 'C',
 }];

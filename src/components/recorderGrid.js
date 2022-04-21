@@ -1,5 +1,6 @@
 import * as React from 'react';
 import MaterialTable from 'material-table';
+import { TableCell, TableHead, TableRow } from '@material-ui/core';
 import {
   ArrowDownward,
   ChevronLeft,
@@ -36,34 +37,67 @@ const RecorderGrid = () => {
     setRowData(getGiData);
   }, []);
 
-  const colDefs = [{
-    title: '',
-    field: 'id',
-    hidden: true,
-  }, {
-    title: 'Date',
-    field: 'giDate',
-    render: (row) => formatDate(row.giDate),
-  }, {
-    title: 'Fasting',
-    field: 'fasting',
-    render: (row) => {
-      console.dir(row);
-    },
-  }, {
-    field: 'comment',
-    title: 'Comment',
-  }];
+  // const colDefs = [{
+  //   title: '',
+  //   field: 'id',
+  //   hidden: true,
+  // }, {
+  //   title: 'Date',
+  //   field: 'giDate',
+  //   render: (row) => formatDate(row.giDate),
+  // }, {
+  //   field: 'comment',
+  //   title: 'Comment',
+  // }];
   
   return ( 
     <div style={{ height: 400, width: '100%' }}>
       <MaterialTable
         title='GI Recorder'
         icons={ tableIcons }
-        columns={ colDefs }
         data={ rowData }
         options={{
           exportButton: true
+        }}
+        components={{
+          Header: props => {
+            return (
+              <TableHead>
+                <TableRow>
+                  <TableCell align="center">Date</TableCell>
+                  <TableCell align="center">Fasting</TableCell>
+                  <TableCell colSpan={ 3 } align="center">Breakfast</TableCell>
+                  <TableCell colSpan={ 3 } align="center">Lunch</TableCell>
+                  <TableCell colSpan={ 3 } align="center">Dinner</TableCell>
+                  <TableCell align="center">Other</TableCell>
+                  <TableCell>Comment</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell align="center">GI</TableCell>
+                  <TableCell align="center">Before</TableCell>
+                  <TableCell align="center">GI</TableCell>
+                  <TableCell align="center">After</TableCell>
+                  <TableCell align="center">Before</TableCell>
+                  <TableCell align="center">GI</TableCell>
+                  <TableCell align="center">After</TableCell>
+                  <TableCell align="center">Before</TableCell>
+                  <TableCell align="center">GI</TableCell>
+                  <TableCell align="center">After</TableCell>
+                  <TableCell align="center">GI</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+              </TableHead>
+            );
+          },
+          Row: ({ data }) => {
+            return (
+              <TableRow>
+                <TableCell>{ formatDate(data.giDate) }</TableCell>
+                <TableCell>{ data.comment }</TableCell>
+              </TableRow>
+            );
+          },
         }}
       />
     </div>
